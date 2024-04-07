@@ -3,7 +3,6 @@ import superjson from 'superjson';
 import { ZodError } from "zod";
 
 export const t = initTRPC
-    .context()
     .create({
         errorFormatter({ shape, error }) {
             return {
