@@ -36,10 +36,11 @@ const SignUp: NextPage = ({}) => {
       if (
         localStorage.getItem("currentUser") &&
         localStorage.getItem("otpVerified")
-      )
+      ) {
         router.push("/products");
+      }
     }
-  }, [typeof window]);
+  }, []);
   const handleFieldChange = ({
     id,
     value,
@@ -54,7 +55,7 @@ const SignUp: NextPage = ({}) => {
   };
 
   const onSubmit = () => {
-    const a = updateMutation.mutate({ name, email, password });
+    updateMutation.mutate({ name, email, password });
     localStorage.setItem("currentUser", email);
     router.push("/signUp/otp");
   };

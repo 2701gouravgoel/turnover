@@ -61,7 +61,11 @@ const Products: NextPage = ({}) => {
           <div className="mb-7 font-medium fs-20">My saved interests!</div>
           {products?.map(({ title, checkIn, id }) => {
             return (
-              <div className="flex mb-6" onClick={() => updateList(id)}>
+              <div
+                key={id}
+                className="flex mb-6"
+                onClick={() => updateList(id)}
+              >
                 {checkIn ? (
                   <div className="checkbox checkIn ">
                     <span className="text-white">{"✔"}</span>

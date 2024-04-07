@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import type { NextPage } from "next";
-import Input from "../../components/textInput";
 import Navigation from "../../components/Navigation";
 import Button from "../../components/button";
 import { useRouter } from "next/router";
@@ -8,7 +7,7 @@ import { trpc } from "../_app";
 
 const SignIn: NextPage = ({}) => {
   const [otp, setOTP] = useState<string[]>(["", "", "", "", "", "", "", ""]);
-  let currentUser: string = "";
+  let currentUser = "";
   if (typeof window !== "undefined") {
     currentUser = localStorage.getItem("currentUser") || "";
   }
@@ -18,7 +17,7 @@ const SignIn: NextPage = ({}) => {
     otp: otp.join(""),
   });
   const handleChange = (index: number, value: string) => {
-    let newOTP = [...otp];
+    const newOTP = [...otp];
     newOTP[index] = value;
     setOTP(newOTP);
   };

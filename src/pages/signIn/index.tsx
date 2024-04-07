@@ -47,10 +47,11 @@ const SignIn: NextPage = ({}) => {
       if (
         localStorage.getItem("currentUser") &&
         localStorage.getItem("otpVerified")
-      )
+      ) {
         router.push("/products");
+      }
     }
-  }, [typeof window]);
+  }, []);
   return (
     <div className="flex flex-col items-center page">
       <Navigation />
