@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.modal{
+    width: 576px;
+}
+.page{
+    height: 100vh;
+    width: 100vw;
+}
+.w-456{
+    width: 456px;
+}
+.px-15{
+    padding-left:60px ;
+    padding-right:60px ;
+}
+.h-56{
+    height: 56px;
+}
+.fs-32{
+    font-size: 32px;
+}
+.br-20{
+    border-radius: 20px;
+}
+.fs-24{
+   font-size: 24px;
+}
+.margin-bottom-13{
+    margin-bottom: 13px;
+}
+.py-18{
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+.checkbox{
+    width: 24px;
+    height: 24px;
+    background-color: #CCCCCC;
+    border-radius: 4px;
+}
+
+.checkIn{
+    background-color: #000000;
+}
+.fs-20{
+    font-size: 20px;
+}
+.pagination{
+    color: #ACACAC;
+    font-weight: 500;
+}
+.otpInput{
+    width: 46px;
+    height: 48px;
+    border-radius: 6px;
+    border:#C1C1C1 solid 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
