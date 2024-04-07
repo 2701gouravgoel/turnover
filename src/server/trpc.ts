@@ -1,10 +1,9 @@
 import { initTRPC } from "@trpc/server";
-import { Context } from "./router/context";
 import superjson from 'superjson';
 import { ZodError } from "zod";
 
 export const t = initTRPC
-    .context<Context>()
+    .context()
     .create({
         errorFormatter({ shape, error }) {
             return {
